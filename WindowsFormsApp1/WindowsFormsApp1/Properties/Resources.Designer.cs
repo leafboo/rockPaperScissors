@@ -63,6 +63,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_0774 {
+            get {
+                object obj = ResourceManager.GetObject("IMG_0774", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paper_emoji {
             get {
                 object obj = ResourceManager.GetObject("paper-emoji", resourceCulture);
@@ -83,9 +93,29 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap scissors_blue {
+            get {
+                object obj = ResourceManager.GetObject("scissors-blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap scissors_emoji {
             get {
                 object obj = ResourceManager.GetObject("scissors-emoji", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap scissors_pink {
+            get {
+                object obj = ResourceManager.GetObject("scissors-pink", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

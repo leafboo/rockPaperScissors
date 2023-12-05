@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         Random random = new Random();
         int computerScore;
         int playerScore;
-        string tie;
+        string draw;
 
         public Form1()
         {
@@ -48,27 +48,67 @@ namespace WindowsFormsApp1
         private string updateTextAndImage(string text, PictureBox pic)
         {
             string word = null;
-
-            switch (text)
+            if (pic == PLAYER_PIC)
             {
-                case "R":
-                    word = "Rock";
-                    pic.Image = Properties.Resources.rock_emoji;
-                    break;
-                case "P":
-                    word = "Paper";
-                    pic.Image = Properties.Resources.paper_emoji;
-                    break;
-                case "S":
-                    word = "Scissors";
-                    pic.Image = Properties.Resources.scissors_emoji;
-                    break;
+                switch (text)
+                {
+                    case "R":
+                        word = "Rock";
+                        pic.Image = Properties.Resources.rock_emoji;
+                        break;
+                    case "P":
+                        word = "Paper";
+                        pic.Image = Properties.Resources.paper_emoji;
+                        break;
+                    case "S":
+                        word = "Scissors";
+                        pic.Image = Properties.Resources.scissors_blue;
+                        break;
                 
+                }
+            } else {
+                switch (text)
+                {
+                    case "R":
+                        word = "Rock";
+                        pic.Image = Properties.Resources.rock_emoji;
+                        break;
+                    case "P":
+                        word = "Paper";
+                        pic.Image = Properties.Resources.paper_emoji;
+                        break;
+                    case "S":
+                        word = "Scissors";
+                        pic.Image = Properties.Resources.scissors_pink;
+                        break;
+
+                }
             }
+
+           
 
             return word;
         }
         private void checkGame()
+        {
+            if (computerChoice == playerChoice)
+            {
+                draw = " Draw!";
+            } else if (playerChoice == "R" && computerChoice == "P" || playerChoice == "P" && computerChoice == "S" || playerChoice == "S" && computerChoice == "R")
+            {
+                computerScore++;
+                draw = null;
+            } else
+            {
+                playerScore++;
+                draw = null;
+            }
+            lblComputerResult.Text = "Computer Score" + computerScore;
+            lblPlayerResult.Text = "Player Score" + playerScore;
+            lblDraw.Text = draw;
+        }
+
+        private void PLAYER_PIC_Click(object sender, EventArgs e)
         {
 
         }
